@@ -1,6 +1,6 @@
-# Extism Demo
+## Extism Demo
 
-Reproducable example -- Currently fails
+Reproducable example of using self built host function -- Currently fails
 
 ## Build
 
@@ -12,5 +12,5 @@ cargo build --release --target wasm32-unknown-unknown
 ## Run Tests
 
 ```bash
-cargo.exe test --package extism-demo --lib -- tests --nocapture
+cargo test --package extism-demo --lib -- tests --nocapture
 ```
