@@ -9,3 +9,6 @@ edition = "2021"
 [dev-dependencies]
 extism = "0.4.0"
 anyhow = "1.0.71"
+
+[patch.crates-io]
+extism-pdk = { git = "https://github.com/extism/rust-pdk.git", branch = "fix-macro" }

@@ -1,15 +1,15 @@
 ## Extism Demo
 
-Reproducable example of using self built host function -- Currently fails
+Reproducable example of using self built host function -- Currently run with patch applied to fix the macro.
 
-## Build
+## Build Plugin
 
 ```bash
 cd plugin
 cargo build --release --target wasm32-unknown-unknown
 ```
 
-## Run Tests
+## Run Test
 
 ```bash
 cargo test --package extism-demo --lib -- tests --nocapture
