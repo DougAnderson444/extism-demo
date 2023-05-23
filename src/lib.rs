@@ -18,10 +18,10 @@ mod tests {
     #[test]
     fn it_works() {
         // works
-        let wasm = include_bytes!("code-functions.wasm");
+        // let wasm = include_bytes!("code-functions.wasm");
 
         // fails
-        // let wasm = include_bytes!("../target/wasm32-unknown-unknown/release/extism_plugin.wasm");
+        let wasm = include_bytes!("../target/wasm32-unknown-unknown/release/extism_plugin.wasm");
 
         let context = Context::new();
 
@@ -34,11 +34,12 @@ mod tests {
         )
         .with_namespace("env");
 
-        let mut plugin = Plugin::new(&context, wasm, [f], true).unwrap();
+        let wasi = false;
+        let mut plugin = Plugin::new(&context, wasm, [f], wasi).unwrap();
 
         let input = "this is a test";
         let data = plugin.call("count_vowels", input).unwrap();
 
-        assert_eq!(data, b"{\"count\": 4}");
+        assert_eq!(data, b"{\"count\":4}");
     }
 }
