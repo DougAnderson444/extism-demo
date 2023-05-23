@@ -1,6 +1,6 @@
-Extism Demo
+# Extism Demo
 
-Repro -- Currently fails
+Reproducable example -- Currently fails
 
 ## Build
 
